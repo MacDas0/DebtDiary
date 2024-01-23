@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A143D3DB2B5E7492002D8118 /* DebtDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D3DA2B5E7492002D8118 /* DebtDiaryApp.swift */; };
+		A143D3DF2B5E7496002D8118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A143D3DE2B5E7496002D8118 /* Assets.xcassets */; };
+		A143D3E22B5E7496002D8118 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A143D3E12B5E7496002D8118 /* Preview Assets.xcassets */; };
+		A143D3EC2B5E7496002D8118 /* DebtDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D3EB2B5E7496002D8118 /* DebtDiaryTests.swift */; };
+		A143D3F62B5E7496002D8118 /* DebtDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D3F52B5E7496002D8118 /* DebtDiaryUITests.swift */; };
+		A143D3F82B5E7496002D8118 /* DebtDiaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D3F72B5E7496002D8118 /* DebtDiaryUITestsLaunchTests.swift */; };
+		A143D4092B5E7774002D8118 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A143D4072B5E7774002D8118 /* Model.xcdatamodeld */; };
+		A143D40D2B5E790A002D8118 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D40C2B5E790A002D8118 /* MainView.swift */; };
+		A143D40F2B5E7911002D8118 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D40E2B5E7911002D8118 /* DataController.swift */; };
+		A143D4112B5E791F002D8118 /* CoreData-Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D4102B5E791F002D8118 /* CoreData-Helper.swift */; };
+		A143D4172B5F6D63002D8118 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D4162B5F6D63002D8118 /* Tab.swift */; };
+		A143D41B2B5F6E98002D8118 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A143D41A2B5F6E98002D8118 /* Montserrat-Regular.ttf */; };
+		A143D41D2B5F6EA7002D8118 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A143D41C2B5F6EA7002D8118 /* Montserrat-Medium.ttf */; };
+		A143D41F2B5F6EB4002D8118 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A143D41E2B5F6EB4002D8118 /* Montserrat-SemiBold.ttf */; };
+		A143D4232B5F6ED2002D8118 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D4222B5F6ED2002D8118 /* Colors.swift */; };
+		A143D4252B5F7049002D8118 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D4242B5F7049002D8118 /* Fonts.swift */; };
+		A143D4292B5F734E002D8118 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D4282B5F734E002D8118 /* Filter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A143D3E82B5E7496002D8118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A143D3CF2B5E7492002D8118 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A143D3D62B5E7492002D8118;
+			remoteInfo = DebtDiary;
+		};
+		A143D3F22B5E7496002D8118 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A143D3CF2B5E7492002D8118 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A143D3D62B5E7492002D8118;
+			remoteInfo = DebtDiary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A143D3D72B5E7492002D8118 /* DebtDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DebtDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A143D3DA2B5E7492002D8118 /* DebtDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtDiaryApp.swift; sourceTree = "<group>"; };
+		A143D3DE2B5E7496002D8118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A143D3E12B5E7496002D8118 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A143D3E72B5E7496002D8118 /* DebtDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DebtDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A143D3EB2B5E7496002D8118 /* DebtDiaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtDiaryTests.swift; sourceTree = "<group>"; };
+		A143D3F12B5E7496002D8118 /* DebtDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DebtDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A143D3F52B5E7496002D8118 /* DebtDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtDiaryUITests.swift; sourceTree = "<group>"; };
+		A143D3F72B5E7496002D8118 /* DebtDiaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtDiaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A143D4082B5E7774002D8118 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A143D40C2B5E790A002D8118 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A143D40E2B5E7911002D8118 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		A143D4102B5E791F002D8118 /* CoreData-Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData-Helper.swift"; sourceTree = "<group>"; };
+		A143D4122B5E859A002D8118 /* DebtDiary.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DebtDiary.entitlements; sourceTree = "<group>"; };
+		A143D4132B5E85A0002D8118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A143D4162B5F6D63002D8118 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		A143D41A2B5F6E98002D8118 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		A143D41C2B5F6EA7002D8118 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		A143D41E2B5F6EB4002D8118 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		A143D4222B5F6ED2002D8118 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A143D4242B5F7049002D8118 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		A143D4282B5F734E002D8118 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A143D3D42B5E7492002D8118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A143D3E42B5E7496002D8118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A143D3EE2B5E7496002D8118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A143D3CE2B5E7492002D8118 = {
+			isa = PBXGroup;
+			children = (
+				A143D3D92B5E7492002D8118 /* DebtDiary */,
+				A143D3EA2B5E7496002D8118 /* DebtDiaryTests */,
+				A143D3F42B5E7496002D8118 /* DebtDiaryUITests */,
+				A143D3D82B5E7492002D8118 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A143D3D82B5E7492002D8118 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A143D3D72B5E7492002D8118 /* DebtDiary.app */,
+				A143D3E72B5E7496002D8118 /* DebtDiaryTests.xctest */,
+				A143D3F12B5E7496002D8118 /* DebtDiaryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A143D3D92B5E7492002D8118 /* DebtDiary */ = {
+			isa = PBXGroup;
+			children = (
+				A143D4132B5E85A0002D8118 /* Info.plist */,
+				A143D4122B5E859A002D8118 /* DebtDiary.entitlements */,
+				A143D3DE2B5E7496002D8118 /* Assets.xcassets */,
+				A143D3DA2B5E7492002D8118 /* DebtDiaryApp.swift */,
+				A143D4162B5F6D63002D8118 /* Tab.swift */,
+				A143D40C2B5E790A002D8118 /* MainView.swift */,
+				A143D4282B5F734E002D8118 /* Filter.swift */,
+				A143D42A2B5F7402002D8118 /* Controllers */,
+				A143D4182B5F6E52002D8118 /* Model */,
+				A143D4192B5F6E66002D8118 /* Extensons */,
+				A143D3E02B5E7496002D8118 /* Preview Content */,
+			);
+			path = DebtDiary;
+			sourceTree = "<group>";
+		};
+		A143D3E02B5E7496002D8118 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A143D3E12B5E7496002D8118 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A143D3EA2B5E7496002D8118 /* DebtDiaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				A143D3EB2B5E7496002D8118 /* DebtDiaryTests.swift */,
+			);
+			path = DebtDiaryTests;
+			sourceTree = "<group>";
+		};
+		A143D3F42B5E7496002D8118 /* DebtDiaryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A143D3F52B5E7496002D8118 /* DebtDiaryUITests.swift */,
+				A143D3F72B5E7496002D8118 /* DebtDiaryUITestsLaunchTests.swift */,
+			);
+			path = DebtDiaryUITests;
+			sourceTree = "<group>";
+		};
+		A143D4182B5F6E52002D8118 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A143D4072B5E7774002D8118 /* Model.xcdatamodeld */,
+				A143D4102B5E791F002D8118 /* CoreData-Helper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A143D4192B5F6E66002D8118 /* Extensons */ = {
+			isa = PBXGroup;
+			children = (
+				A143D4222B5F6ED2002D8118 /* Colors.swift */,
+				A143D4242B5F7049002D8118 /* Fonts.swift */,
+				A143D4202B5F6EBE002D8118 /* Fonts */,
+			);
+			path = Extensons;
+			sourceTree = "<group>";
+		};
+		A143D4202B5F6EBE002D8118 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A143D41A2B5F6E98002D8118 /* Montserrat-Regular.ttf */,
+				A143D41C2B5F6EA7002D8118 /* Montserrat-Medium.ttf */,
+				A143D41E2B5F6EB4002D8118 /* Montserrat-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A143D42A2B5F7402002D8118 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A143D40E2B5E7911002D8118 /* DataController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A143D3D62B5E7492002D8118 /* DebtDiary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A143D3FB2B5E7496002D8118 /* Build configuration list for PBXNativeTarget "DebtDiary" */;
+			buildPhases = (
+				A143D3D32B5E7492002D8118 /* Sources */,
+				A143D3D42B5E7492002D8118 /* Frameworks */,
+				A143D3D52B5E7492002D8118 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DebtDiary;
+			productName = DebtDiary;
+			productReference = A143D3D72B5E7492002D8118 /* DebtDiary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A143D3E62B5E7496002D8118 /* DebtDiaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A143D3FE2B5E7496002D8118 /* Build configuration list for PBXNativeTarget "DebtDiaryTests" */;
+			buildPhases = (
+				A143D3E32B5E7496002D8118 /* Sources */,
+				A143D3E42B5E7496002D8118 /* Frameworks */,
+				A143D3E52B5E7496002D8118 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A143D3E92B5E7496002D8118 /* PBXTargetDependency */,
+			);
+			name = DebtDiaryTests;
+			productName = DebtDiaryTests;
+			productReference = A143D3E72B5E7496002D8118 /* DebtDiaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A143D3F02B5E7496002D8118 /* DebtDiaryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A143D4012B5E7496002D8118 /* Build configuration list for PBXNativeTarget "DebtDiaryUITests" */;
+			buildPhases = (
+				A143D3ED2B5E7496002D8118 /* Sources */,
+				A143D3EE2B5E7496002D8118 /* Frameworks */,
+				A143D3EF2B5E7496002D8118 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A143D3F32B5E7496002D8118 /* PBXTargetDependency */,
+			);
+			name = DebtDiaryUITests;
+			productName = DebtDiaryUITests;
+			productReference = A143D3F12B5E7496002D8118 /* DebtDiaryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A143D3CF2B5E7492002D8118 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A143D3D62B5E7492002D8118 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					A143D3E62B5E7496002D8118 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = A143D3D62B5E7492002D8118;
+					};
+					A143D3F02B5E7496002D8118 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = A143D3D62B5E7492002D8118;
+					};
+				};
+			};
+			buildConfigurationList = A143D3D22B5E7492002D8118 /* Build configuration list for PBXProject "DebtDiary" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A143D3CE2B5E7492002D8118;
+			productRefGroup = A143D3D82B5E7492002D8118 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A143D3D62B5E7492002D8118 /* DebtDiary */,
+				A143D3E62B5E7496002D8118 /* DebtDiaryTests */,
+				A143D3F02B5E7496002D8118 /* DebtDiaryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A143D3D52B5E7492002D8118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A143D41B2B5F6E98002D8118 /* Montserrat-Regular.ttf in Resources */,
+				A143D3E22B5E7496002D8118 /* Preview Assets.xcassets in Resources */,
+				A143D41D2B5F6EA7002D8118 /* Montserrat-Medium.ttf in Resources */,
+				A143D3DF2B5E7496002D8118 /* Assets.xcassets in Resources */,
+				A143D41F2B5F6EB4002D8118 /* Montserrat-SemiBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A143D3E52B5E7496002D8118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A143D3EF2B5E7496002D8118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A143D3D32B5E7492002D8118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A143D4252B5F7049002D8118 /* Fonts.swift in Sources */,
+				A143D4292B5F734E002D8118 /* Filter.swift in Sources */,
+				A143D3DB2B5E7492002D8118 /* DebtDiaryApp.swift in Sources */,
+				A143D40F2B5E7911002D8118 /* DataController.swift in Sources */,
+				A143D40D2B5E790A002D8118 /* MainView.swift in Sources */,
+				A143D4232B5F6ED2002D8118 /* Colors.swift in Sources */,
+				A143D4172B5F6D63002D8118 /* Tab.swift in Sources */,
+				A143D4092B5E7774002D8118 /* Model.xcdatamodeld in Sources */,
+				A143D4112B5E791F002D8118 /* CoreData-Helper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A143D3E32B5E7496002D8118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A143D3EC2B5E7496002D8118 /* DebtDiaryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A143D3ED2B5E7496002D8118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A143D3F62B5E7496002D8118 /* DebtDiaryUITests.swift in Sources */,
+				A143D3F82B5E7496002D8118 /* DebtDiaryUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A143D3E92B5E7496002D8118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A143D3D62B5E7492002D8118 /* DebtDiary */;
+			targetProxy = A143D3E82B5E7496002D8118 /* PBXContainerItemProxy */;
+		};
+		A143D3F32B5E7496002D8118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A143D3D62B5E7492002D8118 /* DebtDiary */;
+			targetProxy = A143D3F22B5E7496002D8118 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A143D3F92B5E7496002D8118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A143D3FA2B5E7496002D8118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A143D3FC2B5E7496002D8118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DebtDiary/DebtDiary.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DebtDiary/Preview Content\"";
+				DEVELOPMENT_TEAM = 59PKGLK4FN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DebtDiary/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdas.DebtDiary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A143D3FD2B5E7496002D8118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DebtDiary/DebtDiary.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DebtDiary/Preview Content\"";
+				DEVELOPMENT_TEAM = 59PKGLK4FN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DebtDiary/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdas.DebtDiary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A143D3FF2B5E7496002D8118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59PKGLK4FN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdas.DebtDiaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DebtDiary.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DebtDiary";
+			};
+			name = Debug;
+		};
+		A143D4002B5E7496002D8118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59PKGLK4FN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdas.DebtDiaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DebtDiary.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DebtDiary";
+			};
+			name = Release;
+		};
+		A143D4022B5E7496002D8118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59PKGLK4FN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdas.DebtDiaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DebtDiary;
+			};
+			name = Debug;
+		};
+		A143D4032B5E7496002D8118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59PKGLK4FN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macdas.DebtDiaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DebtDiary;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A143D3D22B5E7492002D8118 /* Build configuration list for PBXProject "DebtDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A143D3F92B5E7496002D8118 /* Debug */,
+				A143D3FA2B5E7496002D8118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A143D3FB2B5E7496002D8118 /* Build configuration list for PBXNativeTarget "DebtDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A143D3FC2B5E7496002D8118 /* Debug */,
+				A143D3FD2B5E7496002D8118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A143D3FE2B5E7496002D8118 /* Build configuration list for PBXNativeTarget "DebtDiaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A143D3FF2B5E7496002D8118 /* Debug */,
+				A143D4002B5E7496002D8118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A143D4012B5E7496002D8118 /* Build configuration list for PBXNativeTarget "DebtDiaryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A143D4022B5E7496002D8118 /* Debug */,
+				A143D4032B5E7496002D8118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A143D4072B5E7774002D8118 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A143D4082B5E7774002D8118 /* Model.xcdatamodel */,
+			);
+			currentVersion = A143D4082B5E7774002D8118 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A143D3CF2B5E7492002D8118 /* Project object */;
+}
