@@ -4,10 +4,15 @@
         <attribute name="cashAmount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="cashDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="cashLent" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="cashPerson" optional="YES" attributeType="String"/>
         <attribute name="cashTitle" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="cashPerson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="personCash" inverseEntity="Person"/>
         <relationship name="cashTag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" inverseName="tagCash" inverseEntity="Tag"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="personName" optional="YES" attributeType="String"/>
+        <relationship name="personCash" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cash" inverseName="cashPerson" inverseEntity="Cash"/>
     </entity>
     <entity name="Tag" representedClassName="Tag" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>

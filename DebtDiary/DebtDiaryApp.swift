@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct DebtDiaryApp: App {
     @StateObject var dataController = DataController()
+    @StateObject var appSettings = AppSettings()
     
     var body: some Scene {
         WindowGroup {
@@ -17,9 +18,11 @@ struct DebtDiaryApp: App {
                 Tab()
                     .preferredColorScheme(.dark)
                     .tint(.white)
+                    .font(.myMid)
             }
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
+            .environmentObject(appSettings)
         }
     }
     

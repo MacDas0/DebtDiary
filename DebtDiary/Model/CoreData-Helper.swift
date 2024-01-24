@@ -18,11 +18,6 @@ extension Cash: Comparable {
         set { cashTitle = newValue }
     }
     
-    var person: String {
-        get { cashPerson ?? "" }
-        set { cashPerson = newValue }
-    }
-    
     var lent: Bool {
         get { cashLent }
         set { cashLent = newValue }
@@ -41,6 +36,11 @@ extension Cash: Comparable {
         set { cashTag = newValue}
     }
     
+    var person: Person {
+        get { cashPerson ?? Person() }
+        set { cashPerson = newValue }
+    }
+    
     public static func <(lhs: Cash, rhs: Cash) -> Bool {
         let left = lhs.date
         let right = rhs.date
@@ -52,7 +52,7 @@ extension Cash: Comparable {
         } else if right == left {
             return left2 < right2
         } else {
-            return left > right
+            return left < right
         }
     }
 }
@@ -73,6 +73,33 @@ extension Tag: Comparable {
     }
     
     public static func <(lhs: Tag, rhs: Tag) -> Bool {
+        let left = lhs.name
+        let right = rhs.name
+        
+        if left == right {
+            return lhs.ID.uuidString < rhs.ID.uuidString
+        } else {
+            return left < right
+        }
+    }
+}
+
+extension Person: Comparable {
+    var name: String {
+        get { personName ?? "" }
+        set { personName = newValue }
+    }
+    
+    var ID: UUID {
+        id ?? UUID()
+    }
+    
+    var cash: [Cash] {
+        let result = personCash?.allObjects as? [Cash] ?? []
+        return result.sorted()
+    }
+    
+    public static func <(lhs: Person, rhs: Person) -> Bool {
         let left = lhs.name
         let right = rhs.name
         

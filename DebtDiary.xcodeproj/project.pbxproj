@@ -23,7 +23,13 @@
 		A143D41F2B5F6EB4002D8118 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A143D41E2B5F6EB4002D8118 /* Montserrat-SemiBold.ttf */; };
 		A143D4232B5F6ED2002D8118 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D4222B5F6ED2002D8118 /* Colors.swift */; };
 		A143D4252B5F7049002D8118 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D4242B5F7049002D8118 /* Fonts.swift */; };
-		A143D4292B5F734E002D8118 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D4282B5F734E002D8118 /* Filter.swift */; };
+		A143D42C2B5F8506002D8118 /* aListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D42B2B5F8506002D8118 /* aListRow.swift */; };
+		A189AC7E2B5F9A07008E861C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC7D2B5F9A07008E861C /* SettingsView.swift */; };
+		A189AC802B5FAFB0008E861C /* AddSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC7F2B5FAFB0008E861C /* AddSheet.swift */; };
+		A189AC842B60C07D008E861C /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC832B60C07D008E861C /* AppSettings.swift */; };
+		A189AC882B60C2CF008E861C /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC872B60C2CF008E861C /* PreferencesView.swift */; };
+		A189AC8B2B60CB62008E861C /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC8A2B60CB62008E861C /* AppearanceView.swift */; };
+		A189AC8D2B60DFC1008E861C /* DeleteAllDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC8C2B60DFC1008E861C /* DeleteAllDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +71,13 @@
 		A143D41E2B5F6EB4002D8118 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		A143D4222B5F6ED2002D8118 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A143D4242B5F7049002D8118 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		A143D4282B5F734E002D8118 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		A143D42B2B5F8506002D8118 /* aListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aListRow.swift; sourceTree = "<group>"; };
+		A189AC7D2B5F9A07008E861C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A189AC7F2B5FAFB0008E861C /* AddSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSheet.swift; sourceTree = "<group>"; };
+		A189AC832B60C07D008E861C /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		A189AC872B60C2CF008E861C /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		A189AC8A2B60CB62008E861C /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
+		A189AC8C2B60DFC1008E861C /* DeleteAllDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAllDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +132,8 @@
 				A143D4122B5E859A002D8118 /* DebtDiary.entitlements */,
 				A143D3DE2B5E7496002D8118 /* Assets.xcassets */,
 				A143D3DA2B5E7492002D8118 /* DebtDiaryApp.swift */,
-				A143D4162B5F6D63002D8118 /* Tab.swift */,
-				A143D40C2B5E790A002D8118 /* MainView.swift */,
-				A143D4282B5F734E002D8118 /* Filter.swift */,
-				A143D42A2B5F7402002D8118 /* Controllers */,
+				A189AC7A2B5F997A008E861C /* Views */,
+				A189AC822B60C06B008E861C /* Controllers */,
 				A143D4182B5F6E52002D8118 /* Model */,
 				A143D4192B5F6E66002D8118 /* Extensons */,
 				A143D3E02B5E7496002D8118 /* Preview Content */,
@@ -150,8 +160,8 @@
 		A143D3F42B5E7496002D8118 /* DebtDiaryUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A143D3F52B5E7496002D8118 /* DebtDiaryUITests.swift */,
 				A143D3F72B5E7496002D8118 /* DebtDiaryUITestsLaunchTests.swift */,
+				A143D3F52B5E7496002D8118 /* DebtDiaryUITests.swift */,
 			);
 			path = DebtDiaryUITests;
 			sourceTree = "<group>";
@@ -185,12 +195,36 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		A143D42A2B5F7402002D8118 /* Controllers */ = {
+		A189AC7A2B5F997A008E861C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A143D4162B5F6D63002D8118 /* Tab.swift */,
+				A143D40C2B5E790A002D8118 /* MainView.swift */,
+				A143D42B2B5F8506002D8118 /* aListRow.swift */,
+				A189AC7F2B5FAFB0008E861C /* AddSheet.swift */,
+				A189AC892B60C2D3008E861C /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A189AC822B60C06B008E861C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				A143D40E2B5E7911002D8118 /* DataController.swift */,
+				A189AC832B60C07D008E861C /* AppSettings.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A189AC892B60C2D3008E861C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A189AC7D2B5F9A07008E861C /* SettingsView.swift */,
+				A189AC872B60C2CF008E861C /* PreferencesView.swift */,
+				A189AC8A2B60CB62008E861C /* AppearanceView.swift */,
+				A189AC8C2B60DFC1008E861C /* DeleteAllDataView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,14 +361,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				A143D4252B5F7049002D8118 /* Fonts.swift in Sources */,
-				A143D4292B5F734E002D8118 /* Filter.swift in Sources */,
+				A143D42C2B5F8506002D8118 /* aListRow.swift in Sources */,
 				A143D3DB2B5E7492002D8118 /* DebtDiaryApp.swift in Sources */,
+				A189AC882B60C2CF008E861C /* PreferencesView.swift in Sources */,
+				A189AC842B60C07D008E861C /* AppSettings.swift in Sources */,
 				A143D40F2B5E7911002D8118 /* DataController.swift in Sources */,
 				A143D40D2B5E790A002D8118 /* MainView.swift in Sources */,
 				A143D4232B5F6ED2002D8118 /* Colors.swift in Sources */,
 				A143D4172B5F6D63002D8118 /* Tab.swift in Sources */,
 				A143D4092B5E7774002D8118 /* Model.xcdatamodeld in Sources */,
+				A189AC8B2B60CB62008E861C /* AppearanceView.swift in Sources */,
+				A189AC7E2B5F9A07008E861C /* SettingsView.swift in Sources */,
 				A143D4112B5E791F002D8118 /* CoreData-Helper.swift in Sources */,
+				A189AC8D2B60DFC1008E861C /* DeleteAllDataView.swift in Sources */,
+				A189AC802B5FAFB0008E861C /* AddSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

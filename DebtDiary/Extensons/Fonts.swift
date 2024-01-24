@@ -17,7 +17,11 @@ extension Font {
     }
     
     static var myMid: Font {
-        .custom("Montserrat-Regular", size: 13)
+        .custom("Montserrat-Regular", size: 14)
+    }
+    
+    static var myMidMedium: Font {
+        .custom("Montserrat-Medium", size: 14)
     }
     
     static var myMini: Font {
