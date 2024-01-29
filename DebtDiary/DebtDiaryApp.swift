@@ -15,7 +15,7 @@ struct DebtDiaryApp: App {
     var body: some Scene {
         WindowGroup {
             Group {
-                Tab()
+                ContentView()
                     .preferredColorScheme(.dark)
                     .tint(.white)
                     .font(.myMid)

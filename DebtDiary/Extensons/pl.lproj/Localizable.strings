@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  DebtDiary
+
+  Created by Maciej Daszkiewicz on 28/01/2024.
+  
+*/
+
+// GENERAL
+"LENT" = "POŻYCZONO";
+"BORROWED" = "Pożyczono";
+"BORROW" = "POŻYCZ KOMUŚ";
+"borrowed" = "borrowed";
+"Lend" = "Lend";
+"Borrow" = "Borrow";
+"LEND" = "POŻYCZ OD";
+"lent" = "lent";
+
+//PIN
+//"Tap to Unlock" = "Tap to Unlock";
+"Confirm Pin" = "Potwierdź PIN";
+"Delete" = "Usuń";
+"Create Pin" = "Stwórz Pin";
+//"Enable biometric authentication in Settings to unlock the app" = "Enable biometric authentication in Settings to unlock the app";
+"Enter Pin" = "Wpisz PIN";
+"0" = "0";
+
+// Categories
+"Entertainment" = "Rozrywka";
+"Transport" = "Transport";
+"Groceries" = "Spożywcze";
+"Gift" = "Prezent";
+"Medical" = "Medyczne";
+"Food" = "Jedzenie";
+"Rent" = "Czyns";
+"Refund" = "Zwrot";
+"Utility" = "Usługi";
+"Emergency" = "Pilne";
+"Fashion" = "Moda";
+"Subscription" = "Subskrypcja";
+"---" = "---";
+
+// Settings
+"Appearance" = "Wygląd Aplikacji";
+"Change pin code" = "Zmień Kod PIN";
+"Currency" = "Waluta";
+"Delete All Data" = "Usuń Wszystkie Dane";
+"Other" = "Inne";
+"PIN Lock" = "Blokada PIN";
+"Preferences" = "Preferencje";
+"Report Bug" = "Zgłoś Błąd";
+"SETTINGS" = "USTAWIENIA";
+"Suggest feature" = "Zaproponuj Funckcję";
+"Terms and Conditions" = "Regulamin";
+"Privacy Policy" = "Polityka Prywatności";
+"Contact Us" = "Napisz do Nas";
+"APPEARANCE" = "Wygląd Aplikacji";
+"App Language" = "Język Aplikacji";
+"PREFERENCES" = "Preferencje";
+"Remove PIN Lock" = "Usuń Blokadę PIN";
+"Create PIN Lock" = "Stwórz Blokadę PIN";
+"PIN LOCK" = "BLOKADA PIN";
+"Title" = "Tytuł";
+"..." = "...";
+"DELETE ALL DATA" = "USUŃ WSZYSTKIE DANE";
+"Search" = "Szukaj";
+"Color Theme" = "Motyw Kolorystyczny";
+"Amount" = "Kwota";
+"Person" = "Osoba";
+
+// OTHER
+"%@" = "%@";
+"%lld" = "%lld";
+"" = "";

@@ -16,17 +16,21 @@ struct PreferencesView: View {
                 Group {
                     // Currency, Language, Haptics
                     Section {
-                        Picker("Currency", selection: $appSettings.currency) {
-                            ForEach(appSettings.supportedCurrencies, id: \.self) { currency in
-                                Text(currency)
+                        NavigationLink {
+                            CurrencyList()
+                        } label: {
+                            HStack {
+                                Text("Currency")
+                                Spacer()
+                                Text(appSettings.currency).opacity(0.6)
                             }
                         }
-                        Picker("App Language", selection: $appSettings.language) {
-                            ForEach(appSettings.supportedLanguages, id: \.self) { language in
-                                Text(language)
-                            }
-                        }
-                        Toggle("Use Haptic Feedback", isOn: $appSettings.UseHaptics).tint(appSettings.colorTheme)
+//                        Picker("App Language", selection: $appSettings.language) {
+//                            ForEach(appSettings.supportedLanguages, id: \.self) { language in
+//                                Text(language)
+//                            }
+//                        }.pickerStyle(NavigationLinkPickerStyle())
+//                        Toggle("Use Haptic Feedback", isOn: $appSettings.UseHaptics).tint(appSettings.colorTheme)
                     } header: {
                         SectionHeader(text: "")
                     }
@@ -55,8 +59,9 @@ let text: String
     var body: some View {
         HStack {
             Spacer()
-            Text(text.capitalized).font(.myMidMedium).foregroundStyle(.white)
+            Text(LocalizedStringKey(text.capitalized)).font(.myMidMedium).foregroundStyle(.white)
             Spacer()
         }
     }
 }
+

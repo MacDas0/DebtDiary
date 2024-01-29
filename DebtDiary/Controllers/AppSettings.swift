@@ -6,10 +6,19 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 class AppSettings: ObservableObject {
     
-    @Published var colorTheme: Color = Color.customGreen
+    // APPEARANCE
+    @Published var colorTheme: Color = Color.customGreen {
+        didSet {
+            colorName = Color.name(for: colorTheme)
+            saveColorToUserDefaults()
+        }
+    }
+    @Published var colorName: String = "customGreen"
+        
     func gradient() -> LinearGradient {
         return LinearGradient(
             gradient: Gradient(colors: [colorTheme, Color.backgroundDark]),
@@ -24,12 +33,127 @@ class AppSettings: ObservableObject {
             endPoint: .trailing
             )
     }
-    
-    let supportedCurrencies = ["PLN", "USD", "EURO", "BAHT"]
-    @Published var currency = "PLN"
+    // PREFERENCES
+    @Published var currency = "USD"
     
     let supportedLanguages = ["Polish", "English"]
-    @Published var language = "Polish"
+    @Published var language = "English"
     
     @Published var UseHaptics = true
+    
+    // LOCK
+    @Published var secretPin = "" {
+        didSet {
+            savePinToUserDefaults()
+        }
+    }
+
+    func updateLockType() {
+        if lockState == .noLock {
+            authenticate()
+            lockState = .newLock
+        } else if lockState == .lock {
+            lockState = .removeLock
+        }
+    }
+    func authenticate() {
+    let context = LAContext()
+    var error: NSError?
+
+        // check whether biometric authentication is possible
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            // it's possible, so go ahead and use it
+            let reason = "We need to unlock your data."
+
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                // authentication has now completed
+                if success {
+                    // authenticated successfully
+                } else {
+                    // there was a problem
+                }
+            }
+        } else {
+            // no biometrics
+        }
+    }
+    
+    var isBiometricAvailable: Bool {
+    let context = LAContext()
+    return context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
+}
+    enum LockState {
+        case noLock, lock, newLock, editLock, removeLock
+    }
+    @Published var lockState: LockState = .noLock {
+        willSet {
+            if lockState == .lock || lockState == .noLock {
+                oldLockState = lockState
+            }
+        }
+        didSet {
+            if lockState == .lock || lockState == .noLock {
+                saveLockStateToUserDefaults()
+            }
+        }
+    }
+    @Published var oldLockState: LockState = .noLock
+    
+    init() {
+        loadSettings()
+    }
+    
+    private func saveLockStateToUserDefaults() {
+        UserDefaults.standard.set(lockState.rawValue, forKey: "lockState")
+    }
+    private func savePinToUserDefaults() {
+        UserDefaults.standard.set(secretPin, forKey: "pin")
+    }
+    
+    private func saveColorToUserDefaults() {
+        colorTheme.save(to: UserDefaults.standard, withKey: "color")
+    }
+    
+    private func loadSettings() {
+        if let savedLockState = UserDefaults.standard.value(forKey: "lockState") as? String,
+           let state = LockState(rawValue: savedLockState) {
+            lockState = state
+            print("-------------------\(state)")
+        }
+        if let retrievedColor = Color.load(from: UserDefaults.standard, withKey: "color") {
+            colorTheme = retrievedColor
+        }
+        
+        secretPin = UserDefaults.standard.string(forKey: "pin") ?? ""
+    }
+}
+
+extension AppSettings.LockState: RawRepresentable {
+    typealias RawValue = String
+
+    init?(rawValue: RawValue) {
+        switch rawValue {
+        case "noLock":
+            self = .noLock
+        case "lock":
+            self = .lock
+        default:
+            return nil
+        }
+    }
+
+    var rawValue: RawValue {
+        switch self {
+        case .noLock:
+            return "noLock"
+        case .lock:
+            return "lock"
+        case .newLock:
+            return "noLock"
+        case .editLock:
+            return "Lock"
+        case .removeLock:
+            return "Lock"
+        }
+    }
 }

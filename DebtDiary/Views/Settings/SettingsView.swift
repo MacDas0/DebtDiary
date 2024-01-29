@@ -13,10 +13,9 @@ struct SettingsView: View {
 
     @State private var preferences = false
     @State private var appearance = false
-    @State private var pinLock = false
+    @State private var appLock = false
     @State private var history = false
     @State private var contactUs = false
-    @State private var reportABug = false
     @State private var deleteAllData = false
     @State private var termsAndConditions = false
     @State private var privacyPolicy = false
@@ -27,28 +26,34 @@ struct SettingsView: View {
             List {
                 Group {
                     Section {
-                        Button("Preferences") { preferences.toggle() }
                         Button("Appearance") { appearance.toggle() }
                     }
                     Section {
-                        Button("Pin lock") { }
-                        Button("History") { }
+                        Button("Contact Us") { contactUs.toggle()}
                     }
                     Section {
-                        Button("Contact us") { }
-                        Button("Report a bug") { }
+                        Button("PIN Lock") { appLock.toggle() }
+//                        Button("History") { }
                     }
                     Section {
-                        Button("Delete all data") { deleteAllData.toggle() }
+                        Button("Currency") { preferences.toggle() }
                     }
                     Section {
-                        Button("Terms and conditions") { }
-                        Button("Privacy policy") { }
+                        Button("Delete All Data") { deleteAllData.toggle() }
+                    }
+                    Section {
+                        Link("Privacy Policy", destination: URL(string: "https://www.termsfeed.com/live/d3cea12a-d879-426e-bc2c-02420d634fa4")!)
+                    }
+                    Section {
+                        Link("Terms and Conditions", destination: URL(string: "https://www.termsfeed.com/live/d3bee33f-a748-4a1c-9d04-adb198db0b3c")!)
+
                     }
                 }.listRowBackground(colorManager.gradient())
             }.background(Color.backgroundDark) .scrollContentBackground(.hidden)
-            .sheet(isPresented: $preferences) { PreferencesView().presentationDetents([.medium])}
-            .fullScreenCover(isPresented: $appearance) { AppearanceView()}
+            .sheet(isPresented: $preferences) { CurrencyList().presentationDetents([.medium])}
+            .sheet(isPresented: $appearance) { AppearanceView().presentationDetents([.medium])}
+            .sheet(isPresented: $contactUs) { ContactUsView().presentationDetents([.medium])}
+            .sheet(isPresented: $appLock) { AppLockView().presentationDetents([.medium])}
             .sheet(isPresented: $deleteAllData) { DeleteAllDataView(deletedAllData: $deletedAllData).presentationDetents([.medium]) .onDisappear { if deletedAllData == true { dismiss() } }}
             .toolbar {
                 ToolbarItem(placement: .principal) {

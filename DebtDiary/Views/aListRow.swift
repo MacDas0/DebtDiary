@@ -13,12 +13,18 @@ struct aListRow: View {
     let cash: Cash
 
     var body: some View {
-        HStack {
-            Text(cash.title).font(.myMid)
-            Spacer()
-            Text(String(cash.amount)).font(.myMidMedium)
-            Text("PLN").font(.myMidMedium)
-        }.listRowBackground(appSettings.gradient())
+        Button {
+            
+        } label: {
+            HStack {
+                Group {
+                    Text(cash.title).font(.myMid)
+                    Spacer()
+                    Text("\(String(cash.amount))").font(.myMidMedium)
+                    Text(appSettings.currency).font(.myMidMedium)
+                }.accessibilityElement() .accessibilityLabel("\(cash.title) \(cash.amount) \(appSettings.currency)")
+            }
+        }.listRowBackground(appSettings.gradient()) 
         .contextMenu {
             Button("Delete") {
                 dataController.delete(cash)

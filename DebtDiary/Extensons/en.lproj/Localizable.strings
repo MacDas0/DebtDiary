@@ -1,0 +1,81 @@
+/* 
+  Localizable.strings
+  DebtDiary
+
+  Created by Maciej Daszkiewicz on 28/01/2024.
+  
+*/
+
+// GENERAL
+"LENT" = "LENT";
+"BORROWED" = "BORROWED";
+"BORROW" = "BORROW";
+"borrowed" = "borrowed";
+"Lend" = "Lend";
+"Borrow" = "Borrow";
+"LEND" = "LEND";
+"lent" = "lent";
+
+//PIN
+"Tap to Unlock" = "Tap to Unlock";
+"Confirm Pin" = "Confirm Pin";
+"Delete" = "Delete";
+"Create Pin" = "Create Pin";
+//"Enable biometric authentication in Settings to unlock the app" = "Enable biometric authentication in Settings to unlock the app";
+"Enter Pin" = "Enter Pin";
+"0" = "0";
+
+// Categories
+"Entertainment" = "Entertainment";
+"Transport" = "Transport";
+"Groceries" = "Groceries";
+"Gift" = "Gift";
+"Medical" = "Medical";
+"Food" = "Food";
+"Rent" = "Rent";
+"Refund" = "Refund";
+"Utility" = "Utility";
+"Emergency" = "Emergency";
+"Fashion" = "Fashion";
+"Subscription" = "Subscription";
+"---" = "---";
+
+// Settings
+"Appearance" = "Appearance";
+"Change pin code" = "Change pin code";
+"Currency" = "Currency";
+"Delete All Data" = "Delete All Data";
+"Other" = "Other";
+"PIN Lock" = "PIN Lock";
+"Preferences" = "Preferences";
+"Report Bug" = "Report Bug";
+"SETTINGS" = "SETTINGS";
+"Suggest feature" = "Suggest feature";
+"Terms and Conditions" = "Terms and Conditions";
+"Privacy Policy" = "Privacy Policy";
+"Contact Us" = "Contact Us";
+"APPEARANCE" = "APPEARANCE";
+"App Language" = "App Language";
+"PREFERENCES" = "PREFERENCES";
+"Remove PIN Lock" = "Remove PIN Lock";
+"Create PIN Lock" = "Create PIN Lock";
+"PIN LOCK" = "PIN LOCK";
+"Title" = "Title";
+"..." = "...";
+"DELETE ALL DATA" = "DELETE ALL DATA";
+"Search" = "Search";
+"Color Theme" = "Color Theme";
+"Amount" = "Amount";
+"Person" = "Person";
+
+// OTHER
+"%@" = "%@";
+"%@%@" = "%@%@";
+"%lld" = "%lld";
+"" = "";
+
+// FACE ID ALERT
+"FaceID access required" = "FaceID access required";
+"Go to Settings?" = "Go to Settings?";
+"Settings" = "Settings";
+"Cancel" = "Cancel";

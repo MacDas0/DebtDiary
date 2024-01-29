@@ -37,6 +37,72 @@ extension Color {
     static let customCyan = Color(hex: 0x008B8B)
     static let turquoise = Color(hex: 0x307B7F)
     static let aquamarine = Color(hex: 0x4FAFA7)
-    static let darkBlack = Color(hex: 0x000000)
+    
+    func toUIColor() -> UIColor {
+        UIColor(self)
+    }
 
+    func save(to userDefaults: UserDefaults, withKey key: String) {
+        let uiColor = self.toUIColor()
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        
+        uiColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        let colorComponents = [red, green, blue, alpha]
+        userDefaults.set(colorComponents, forKey: key)
+    }
+    
+    static func load(from userDefaults: UserDefaults, withKey key: String) -> Color? {
+        guard let components = userDefaults.object(forKey: key) as? [CGFloat], components.count == 4 else {
+            return nil
+        }
+        return Color(red: Double(components[0]), green: Double(components[1]), blue: Double(components[2]), opacity: Double(components[3]))
+    }
+    
+    static func name(for color: Color) -> String {
+        switch color {
+        case Color.customGreen:
+            return "customGreen"
+        case Color.limeGreen:
+            return "limeGreen"
+        case Color.yellowGreen:
+            return "yellowGreen"
+        case Color.customYellow:
+            return "customYellow"
+        case Color.gold:
+            return "gold"
+        case Color.customOrange:
+            return "customOrange"
+        case Color.coral:
+            return "coral"
+        case Color.redOrange:
+            return "redOrange"
+        case Color.customRed:
+            return "customRed"
+        case Color.crimson:
+            return "crimson"
+        case Color.magenta:
+            return "magenta"
+        case Color.deepPink:
+            return "deepPink"
+        case Color.customPurple:
+            return "customPurple"
+        case Color.blueViolet:
+            return "blueViolet"
+        case Color.customBlue:
+            return "customBlue"
+        case Color.dodgerBlue:
+            return "dodgerBlue"
+        case Color.customCyan:
+            return "customCyan"
+        case Color.turquoise:
+            return "turquoise"
+        case Color.aquamarine:
+            return "aquamarine"
+        default:
+            return "basic"
+        }
+    }
 }

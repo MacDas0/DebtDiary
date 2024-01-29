@@ -134,7 +134,6 @@ class DataController: ObservableObject {
             return newPerson
         }
     }
-
     
     func createSampleData() {
         let viewContext = container.viewContext
@@ -148,35 +147,35 @@ class DataController: ObservableObject {
             let tag: Tag
             switch i {
             case 1:
-                cash.cashAmount = 65
-                person = FetchOrCreatePerson(name: "Tata")
-                cash.cashTitle = "Roller do masażu mięśni"
-                tag = FetchOrCreateTag(name: "Medical")
+                cash.cashAmount = 6
+                person = FetchOrCreatePerson(name: "James")
+                cash.cashTitle = "Bowling"
+                tag = FetchOrCreateTag(name: "Entertainment")
             case 2:
-                cash.cashAmount = 85
-                person = FetchOrCreatePerson(name: "Tata")
-                cash.cashTitle = "Płyn do mycia twarzy (anty-bakteryjny)"
-                tag = FetchOrCreateTag(name: "Medical")
+                cash.cashAmount = 10
+                person = FetchOrCreatePerson(name: "Sarah")
+                cash.cashTitle = "Cinema tickets"
+                tag = FetchOrCreateTag(name: "Entertainment")
             case 3:
-                cash.cashAmount = 160
-                person = FetchOrCreatePerson(name: "Tata")
-                cash.cashTitle = "Apka do medytacji (roczne)"
-                tag = FetchOrCreateTag(name: "Subscription")
+                cash.cashAmount = 4
+                person = FetchOrCreatePerson(name: "James")
+                cash.cashTitle = "Train ticket"
+                tag = FetchOrCreateTag(name: "Transport")
             case 4:
-                cash.cashAmount = 86
-                person = FetchOrCreatePerson(name: "Tata")
-                cash.cashTitle = "HackingWithSwift"
-                tag = FetchOrCreateTag(name: "Subscription")
+                cash.cashAmount = 32
+                person = FetchOrCreatePerson(name: "Emma")
+                cash.cashTitle = "Grocery shopping 15.01"
+                tag = FetchOrCreateTag(name: "Groceries")
             case 5:
-                cash.cashAmount = 44
-                person = FetchOrCreatePerson(name: "Tata")
-                cash.cashTitle = "Książka na kindla (Dune)"
-                tag = FetchOrCreateTag(name: "Other")
+                cash.cashAmount = 100
+                person = FetchOrCreatePerson(name: "James")
+                cash.cashTitle = "Speeding ticket"
+                tag = FetchOrCreateTag(name: "Emergency")
             default:
-                cash.cashAmount = 40
-                person = FetchOrCreatePerson(name: "Tata")
-                cash.cashTitle = "Książka na kindla (Mastery)"
-                tag = FetchOrCreateTag(name: "Other")
+                cash.cashAmount = 25
+                person = FetchOrCreatePerson(name: "Olivia")
+                cash.cashTitle = "Dinner"
+                tag = FetchOrCreateTag(name: "Food")
             }
             cash.cashPerson = person
             cash.cashTag = tag
@@ -190,34 +189,34 @@ class DataController: ObservableObject {
             let tag: Tag
             switch i {
             case 1:
-                cash.cashAmount = 20
-                person = FetchOrCreatePerson(name: "Jasiek")
-                cash.cashTitle = "Obiad w Aiole"
-                tag = FetchOrCreateTag(name: "Food")
+                cash.cashAmount = 15
+                person = FetchOrCreatePerson(name: "Chris")
+                cash.cashTitle = "Random jeans"
+                tag = FetchOrCreateTag(name: "Fashion")
             case 2:
-                cash.cashAmount = 80
-                person = FetchOrCreatePerson(name: "Tata")
-                cash.cashTitle = "Zakupy w bierdonce"
-                tag = FetchOrCreateTag(name: "Groceries")
+                cash.cashAmount = 50
+                person = FetchOrCreatePerson(name: "Olivia")
+                cash.cashTitle = "Secret ;)"
+                tag = FetchOrCreateTag(name: "Other")
             case 3:
-                cash.cashAmount = 35
-                person = FetchOrCreatePerson(name: "Daria")
-                cash.cashTitle = "Kino (kot w butach)"
+                cash.cashAmount = 11
+                person = FetchOrCreatePerson(name: "Emily")
+                cash.cashTitle = "Ice skating"
                 tag = FetchOrCreateTag(name: "Entertainment")
             case 4:
-                cash.cashAmount = 50
-                person = FetchOrCreatePerson(name: "Jasiek")
-                cash.cashTitle = "Skin do lola"
-                tag = FetchOrCreateTag(name: "Entertainment")
+                cash.cashAmount = 15
+                person = FetchOrCreatePerson(name: "Micheal")
+                cash.cashTitle = "Pizza 29.12"
+                tag = FetchOrCreateTag(name: "Food")
             case 5:
-                cash.cashAmount = 2000
-                person = FetchOrCreatePerson(name: "Tata")
-                cash.cashTitle = "Bitcoin"
+                cash.cashAmount = 12
+                person = FetchOrCreatePerson(name: "Mom")
+                cash.cashTitle = "Book"
                 tag = FetchOrCreateTag(name: "Other")
             default:
-                cash.cashAmount = 5
-                person = FetchOrCreatePerson(name: "Zgredzio")
-                cash.cashTitle = "Bilet skm (do metropolii)"
+                cash.cashAmount = 3
+                person = FetchOrCreatePerson(name: "Micheal")
+                cash.cashTitle = "Buss ticket"
                 tag = FetchOrCreateTag(name: "Transport")
             }
             cash.person = person
@@ -225,12 +224,20 @@ class DataController: ObservableObject {
         }
         _ = FetchOrCreateTag(name: "Transport")
         _ = FetchOrCreateTag(name: "Rent")
-        _ = FetchOrCreateTag(name: "Utility")
         _ = FetchOrCreateTag(name: "Gift")
         _ = FetchOrCreateTag(name: "Fashion")
         _ = FetchOrCreateTag(name: "Emergency")
         _ = FetchOrCreateTag(name: "Refund")
         try? viewContext.save()
+        updateAmounts()
+    }
+    
+    func loadTags() {
+        let request = Tag.fetchRequest()
+        let allTags = (try? container.viewContext.fetch(request)) ?? []
+        for tag in allTags {
+            tags.append(tag)
+        }
         updateAmounts()
     }
     

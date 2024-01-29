@@ -30,6 +30,20 @@
 		A189AC882B60C2CF008E861C /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC872B60C2CF008E861C /* PreferencesView.swift */; };
 		A189AC8B2B60CB62008E861C /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC8A2B60CB62008E861C /* AppearanceView.swift */; };
 		A189AC8D2B60DFC1008E861C /* DeleteAllDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC8C2B60DFC1008E861C /* DeleteAllDataView.swift */; };
+		A189AC942B61031E008E861C /* SecurityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC932B61031E008E861C /* SecurityController.swift */; };
+		A189AC9C2B611237008E861C /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC9B2B611237008E861C /* LockView.swift */; };
+		A189AC9E2B61139F008E861C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC9D2B61139F008E861C /* ContentView.swift */; };
+		A189ACA02B61D45B008E861C /* AppLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC9F2B61D45B008E861C /* AppLockView.swift */; };
+		A189ACA22B61D8E9008E861C /* CreatePinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189ACA12B61D8E9008E861C /* CreatePinView.swift */; };
+		A189ACA42B621EA7008E861C /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189ACA32B621EA7008E861C /* ConfirmView.swift */; };
+		A189ACA62B64CEF7008E861C /* ContactUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189ACA52B64CEF7008E861C /* ContactUsView.swift */; };
+		A189ACAC2B64DC03008E861C /* UIDevideModelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189ACAB2B64DC03008E861C /* UIDevideModelName.swift */; };
+		A189ACB02B64FE81008E861C /* DeviceModels2.json in Resources */ = {isa = PBXBuildFile; fileRef = A189ACAF2B64FE81008E861C /* DeviceModels2.json */; };
+		A189ACB22B64FF8C008E861C /* SupportEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189ACB12B64FF8C008E861C /* SupportEmail.swift */; };
+		A189ACB42B6504CF008E861C /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189ACB32B6504CF008E861C /* MailView.swift */; };
+		A189ACB62B65C0F0008E861C /* CurrencyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189ACB52B65C0F0008E861C /* CurrencyList.swift */; };
+		A189ACBB2B65D98B008E861C /* Currency.json in Resources */ = {isa = PBXBuildFile; fileRef = A189ACBA2B65D98B008E861C /* Currency.json */; };
+		A189ACBE2B6615A7008E861C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A189ACC02B6615A7008E861C /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +92,20 @@
 		A189AC872B60C2CF008E861C /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		A189AC8A2B60CB62008E861C /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
 		A189AC8C2B60DFC1008E861C /* DeleteAllDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAllDataView.swift; sourceTree = "<group>"; };
+		A189AC932B61031E008E861C /* SecurityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityController.swift; sourceTree = "<group>"; };
+		A189AC9B2B611237008E861C /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		A189AC9D2B61139F008E861C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A189AC9F2B61D45B008E861C /* AppLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockView.swift; sourceTree = "<group>"; };
+		A189ACA12B61D8E9008E861C /* CreatePinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePinView.swift; sourceTree = "<group>"; };
+		A189ACA32B621EA7008E861C /* ConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
+		A189ACA52B64CEF7008E861C /* ContactUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsView.swift; sourceTree = "<group>"; };
+		A189ACAB2B64DC03008E861C /* UIDevideModelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevideModelName.swift; sourceTree = "<group>"; };
+		A189ACAF2B64FE81008E861C /* DeviceModels2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DeviceModels2.json; sourceTree = "<group>"; };
+		A189ACB12B64FF8C008E861C /* SupportEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportEmail.swift; sourceTree = "<group>"; };
+		A189ACB32B6504CF008E861C /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		A189ACB52B65C0F0008E861C /* CurrencyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyList.swift; sourceTree = "<group>"; };
+		A189ACBA2B65D98B008E861C /* Currency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Currency.json; sourceTree = "<group>"; };
+		A189ACBF2B6615A7008E861C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +199,8 @@
 			children = (
 				A143D4072B5E7774002D8118 /* Model.xcdatamodeld */,
 				A143D4102B5E791F002D8118 /* CoreData-Helper.swift */,
+				A189ACB12B64FF8C008E861C /* SupportEmail.swift */,
+				A189ACB32B6504CF008E861C /* MailView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,8 +208,12 @@
 		A143D4192B5F6E66002D8118 /* Extensons */ = {
 			isa = PBXGroup;
 			children = (
+				A189ACC02B6615A7008E861C /* Localizable.strings */,
+				A189ACBA2B65D98B008E861C /* Currency.json */,
+				A189ACAF2B64FE81008E861C /* DeviceModels2.json */,
 				A143D4222B5F6ED2002D8118 /* Colors.swift */,
 				A143D4242B5F7049002D8118 /* Fonts.swift */,
+				A189ACAB2B64DC03008E861C /* UIDevideModelName.swift */,
 				A143D4202B5F6EBE002D8118 /* Fonts */,
 			);
 			path = Extensons;
@@ -198,6 +232,10 @@
 		A189AC7A2B5F997A008E861C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A189AC9D2B61139F008E861C /* ContentView.swift */,
+				A189AC9B2B611237008E861C /* LockView.swift */,
+				A189ACA12B61D8E9008E861C /* CreatePinView.swift */,
+				A189ACA32B621EA7008E861C /* ConfirmView.swift */,
 				A143D4162B5F6D63002D8118 /* Tab.swift */,
 				A143D40C2B5E790A002D8118 /* MainView.swift */,
 				A143D42B2B5F8506002D8118 /* aListRow.swift */,
@@ -212,6 +250,7 @@
 			children = (
 				A143D40E2B5E7911002D8118 /* DataController.swift */,
 				A189AC832B60C07D008E861C /* AppSettings.swift */,
+				A189AC932B61031E008E861C /* SecurityController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -221,10 +260,21 @@
 			children = (
 				A189AC7D2B5F9A07008E861C /* SettingsView.swift */,
 				A189AC872B60C2CF008E861C /* PreferencesView.swift */,
+				A189ACB72B65C4AE008E861C /* PreferencesLists */,
 				A189AC8A2B60CB62008E861C /* AppearanceView.swift */,
+				A189AC9F2B61D45B008E861C /* AppLockView.swift */,
+				A189ACA52B64CEF7008E861C /* ContactUsView.swift */,
 				A189AC8C2B60DFC1008E861C /* DeleteAllDataView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		A189ACB72B65C4AE008E861C /* PreferencesLists */ = {
+			isa = PBXGroup;
+			children = (
+				A189ACB52B65C0F0008E861C /* CurrencyList.swift */,
+			);
+			path = PreferencesLists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +293,8 @@
 			dependencies = (
 			);
 			name = DebtDiary;
+			packageProductDependencies = (
+			);
 			productName = DebtDiary;
 			productReference = A143D3D72B5E7492002D8118 /* DebtDiary.app */;
 			productType = "com.apple.product-type.application";
@@ -315,6 +367,8 @@
 				Base,
 			);
 			mainGroup = A143D3CE2B5E7492002D8118;
+			packageReferences = (
+			);
 			productRefGroup = A143D3D82B5E7492002D8118 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -331,9 +385,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A189ACBB2B65D98B008E861C /* Currency.json in Resources */,
 				A143D41B2B5F6E98002D8118 /* Montserrat-Regular.ttf in Resources */,
 				A143D3E22B5E7496002D8118 /* Preview Assets.xcassets in Resources */,
+				A189ACB02B64FE81008E861C /* DeviceModels2.json in Resources */,
 				A143D41D2B5F6EA7002D8118 /* Montserrat-Medium.ttf in Resources */,
+				A189ACBE2B6615A7008E861C /* Localizable.strings in Resources */,
 				A143D3DF2B5E7496002D8118 /* Assets.xcassets in Resources */,
 				A143D41F2B5F6EB4002D8118 /* Montserrat-SemiBold.ttf in Resources */,
 			);
@@ -361,20 +418,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				A143D4252B5F7049002D8118 /* Fonts.swift in Sources */,
+				A189ACAC2B64DC03008E861C /* UIDevideModelName.swift in Sources */,
+				A189ACB22B64FF8C008E861C /* SupportEmail.swift in Sources */,
 				A143D42C2B5F8506002D8118 /* aListRow.swift in Sources */,
+				A189ACB42B6504CF008E861C /* MailView.swift in Sources */,
 				A143D3DB2B5E7492002D8118 /* DebtDiaryApp.swift in Sources */,
+				A189ACA62B64CEF7008E861C /* ContactUsView.swift in Sources */,
 				A189AC882B60C2CF008E861C /* PreferencesView.swift in Sources */,
 				A189AC842B60C07D008E861C /* AppSettings.swift in Sources */,
+				A189AC9C2B611237008E861C /* LockView.swift in Sources */,
 				A143D40F2B5E7911002D8118 /* DataController.swift in Sources */,
 				A143D40D2B5E790A002D8118 /* MainView.swift in Sources */,
+				A189ACA22B61D8E9008E861C /* CreatePinView.swift in Sources */,
 				A143D4232B5F6ED2002D8118 /* Colors.swift in Sources */,
 				A143D4172B5F6D63002D8118 /* Tab.swift in Sources */,
 				A143D4092B5E7774002D8118 /* Model.xcdatamodeld in Sources */,
 				A189AC8B2B60CB62008E861C /* AppearanceView.swift in Sources */,
 				A189AC7E2B5F9A07008E861C /* SettingsView.swift in Sources */,
 				A143D4112B5E791F002D8118 /* CoreData-Helper.swift in Sources */,
+				A189AC9E2B61139F008E861C /* ContentView.swift in Sources */,
+				A189AC942B61031E008E861C /* SecurityController.swift in Sources */,
+				A189ACA42B621EA7008E861C /* ConfirmView.swift in Sources */,
+				A189ACB62B65C0F0008E861C /* CurrencyList.swift in Sources */,
 				A189AC8D2B60DFC1008E861C /* DeleteAllDataView.swift in Sources */,
 				A189AC802B5FAFB0008E861C /* AddSheet.swift in Sources */,
+				A189ACA02B61D45B008E861C /* AppLockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +477,17 @@
 			targetProxy = A143D3F22B5E7496002D8118 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A189ACC02B6615A7008E861C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A189ACBF2B6615A7008E861C /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A143D3F92B5E7496002D8118 /* Debug */ = {
@@ -543,11 +622,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DebtDiary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Debt Diary";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -555,6 +637,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.macdas.DebtDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -574,11 +659,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DebtDiary/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Debt Diary";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -586,6 +674,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.macdas.DebtDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

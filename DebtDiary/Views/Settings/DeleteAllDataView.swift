@@ -15,20 +15,17 @@ struct DeleteAllDataView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
+            List {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.backgroundDark).ignoresSafeArea()
-                    // Delete All Data
                     Button {
                         dismiss()
                         deletedAllData = true
                         dataController.deleteAll()
                     } label: {
                         Text("DELETE ALL DATA").font(.myMidMedium).padding()
-                            .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(appSettings.gradient(color: Color.customRed)))
                     }
-                }
-            }
+                }.listRowBackground(appSettings.gradient(color: Color.customRed))
+            }.scrollContentBackground(.hidden) .background(Color.backgroundDark)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button {
