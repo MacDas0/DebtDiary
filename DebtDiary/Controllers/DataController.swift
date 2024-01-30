@@ -21,8 +21,20 @@ class DataController: ObservableObject {
         return dataController
     }()
     
+    static let model: NSManagedObjectModel = {
+        guard let url = Bundle.main.url(forResource: "Model", withExtension: "momd") else {
+            fatalError("Failed to locate model file.")
+        }
+        
+        guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("Failed to load model file")
+        }
+        
+        return managedObjectModel
+    }()
+    
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "Model")
+        container = NSPersistentCloudKitContainer(name: "Model", managedObjectModel: Self.model)
         
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(filePath: "/dev/null")
@@ -45,17 +57,6 @@ class DataController: ObservableObject {
         objectWillChange.send()
     }
     
-//    func editCash(cash: Cash, amount: Int = 0, person: String = "", tag: String = "", lent: Bool = true, title: String = "", id: UUID = UUID()) {
-//        cash.amount = amount
-//        cash.tag = FetchOrCreateTag(name: tag)
-//        cash.person = FetchOrCreatePerson(name: person)
-//        cash.title = title
-//        cash.id = id
-//        cash.lent = lent
-//        cash.cashDate = Date.now
-//        try? container.viewContext.save()
-//    }
-    
     func createCash(amount: Int = 0, person: String = "", tag: String = "", lent: Bool = true, title: String = "", id: UUID = UUID()) {
         let cash = Cash(context: container.viewContext)
         cash.amount = amount
@@ -67,6 +68,32 @@ class DataController: ObservableObject {
         cash.cashDate = Date.now
         try? container.viewContext.save()
         updateAmounts()
+    }
+    
+    func FetchOrCreateTag(name: String) -> Tag {
+            let request = Tag.fetchRequest()
+            let allTags = (try? container.viewContext.fetch(request)) ?? []
+            if allTags.contains(where: { $0.name == name} ) {
+                return allTags.first(where: { $0.name == name })!
+            } else {
+                let newTag = Tag(context: container.viewContext)
+                newTag.id = UUID()
+                newTag.name = name
+                return newTag
+            }
+        }
+        
+    func FetchOrCreatePerson(name: String) -> Person {
+        let request = Person.fetchRequest()
+        let allPeople = (try? container.viewContext.fetch(request)) ?? []
+        if allPeople.contains(where: { $0.name == name} ) {
+            return allPeople.first(where: { $0.name == name })!
+        } else {
+            let newPerson = Person(context: container.viewContext)
+            newPerson.id = UUID()
+            newPerson.name = name
+            return newPerson
+        }
     }
     
     func updateAmounts() {
@@ -106,33 +133,6 @@ class DataController: ObservableObject {
         let allCash = (try? container.viewContext.fetch(request)) ?? []
         let filteredCash = allCash.filter { $0.lent == lent && $0.person == person }
         return filteredCash.sorted()
-    }
-    
-    func FetchOrCreateTag(name: String) -> Tag {
-            let request = Tag.fetchRequest()
-            let allTags = (try? container.viewContext.fetch(request)) ?? []
-            if allTags.contains(where: { $0.name == name} ) {
-                return allTags.first(where: { $0.name == name })!
-            } else {
-                let newTag = Tag(context: container.viewContext)
-                newTag.id = UUID()
-                newTag.name = name
-                tags.append(newTag)
-                return newTag
-            }
-        }
-        
-    func FetchOrCreatePerson(name: String) -> Person {
-        let request = Person.fetchRequest()
-        let allPeople = (try? container.viewContext.fetch(request)) ?? []
-        if allPeople.contains(where: { $0.name == name} ) {
-            return allPeople.first(where: { $0.name == name })!
-        } else {
-            let newPerson = Person(context: container.viewContext)
-            newPerson.id = UUID()
-            newPerson.name = name
-            return newPerson
-        }
     }
     
     func createSampleData() {
@@ -222,17 +222,23 @@ class DataController: ObservableObject {
             cash.person = person
             cash.cashTag = tag
         }
+        try? viewContext.save()
+        updateAmounts()
+    }
+    
+    func loadTags() {
         _ = FetchOrCreateTag(name: "Transport")
         _ = FetchOrCreateTag(name: "Rent")
         _ = FetchOrCreateTag(name: "Gift")
         _ = FetchOrCreateTag(name: "Fashion")
         _ = FetchOrCreateTag(name: "Emergency")
         _ = FetchOrCreateTag(name: "Refund")
-        try? viewContext.save()
-        updateAmounts()
-    }
-    
-    func loadTags() {
+        _ = FetchOrCreateTag(name: "Transport")
+        _ = FetchOrCreateTag(name: "Rent")
+        _ = FetchOrCreateTag(name: "Gift")
+        _ = FetchOrCreateTag(name: "Fashion")
+        _ = FetchOrCreateTag(name: "Emergency")
+        _ = FetchOrCreateTag(name: "Refund")
         let request = Tag.fetchRequest()
         let allTags = (try? container.viewContext.fetch(request)) ?? []
         for tag in allTags {
@@ -272,5 +278,9 @@ class DataController: ObservableObject {
         let request2: NSFetchRequest<NSFetchRequestResult> = Tag.fetchRequest()
         delete(request2)
         updateAmounts()
+    }
+    
+    func count<T>(for fetchRequest: NSFetchRequest<T>) -> Int {
+        (try? container.viewContext.count(for: fetchRequest)) ?? 0
     }
 }

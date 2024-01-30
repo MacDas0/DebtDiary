@@ -24,6 +24,8 @@
 		A143D4232B5F6ED2002D8118 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D4222B5F6ED2002D8118 /* Colors.swift */; };
 		A143D4252B5F7049002D8118 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D4242B5F7049002D8118 /* Fonts.swift */; };
 		A143D42C2B5F8506002D8118 /* aListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143D42B2B5F8506002D8118 /* aListRow.swift */; };
+		A17235052B68E75000215E64 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17235042B68E75000215E64 /* AssetTests.swift */; };
+		A17235092B68EEF800215E64 /* DataControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17235082B68EEF800215E64 /* DataControllerTests.swift */; };
 		A189AC7E2B5F9A07008E861C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC7D2B5F9A07008E861C /* SettingsView.swift */; };
 		A189AC802B5FAFB0008E861C /* AddSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC7F2B5FAFB0008E861C /* AddSheet.swift */; };
 		A189AC842B60C07D008E861C /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189AC832B60C07D008E861C /* AppSettings.swift */; };
@@ -86,6 +88,9 @@
 		A143D4222B5F6ED2002D8118 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A143D4242B5F7049002D8118 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		A143D42B2B5F8506002D8118 /* aListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aListRow.swift; sourceTree = "<group>"; };
+		A17235032B68E51C00215E64 /* DebtDiary.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DebtDiary.xctestplan; sourceTree = "<group>"; };
+		A17235042B68E75000215E64 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
+		A17235082B68EEF800215E64 /* DataControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllerTests.swift; sourceTree = "<group>"; };
 		A189AC7D2B5F9A07008E861C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A189AC7F2B5FAFB0008E861C /* AddSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSheet.swift; sourceTree = "<group>"; };
 		A189AC832B60C07D008E861C /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
@@ -180,7 +185,10 @@
 		A143D3EA2B5E7496002D8118 /* DebtDiaryTests */ = {
 			isa = PBXGroup;
 			children = (
+				A17235032B68E51C00215E64 /* DebtDiary.xctestplan */,
 				A143D3EB2B5E7496002D8118 /* DebtDiaryTests.swift */,
+				A17235042B68E75000215E64 /* AssetTests.swift */,
+				A17235082B68EEF800215E64 /* DataControllerTests.swift */,
 			);
 			path = DebtDiaryTests;
 			sourceTree = "<group>";
@@ -450,6 +458,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A17235052B68E75000215E64 /* AssetTests.swift in Sources */,
+				A17235092B68EEF800215E64 /* DataControllerTests.swift in Sources */,
 				A143D3EC2B5E7496002D8118 /* DebtDiaryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

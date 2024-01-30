@@ -11,27 +11,25 @@ struct CurrencyList: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var appSettings: AppSettings
     @State private var searchText = ""
-    @State private var currencies: [Currency] = []
     var filteredCurrencies: [Currency] {
         if searchText.isEmpty {
-            return currencies
+            return AppSettings.allCurrencies
         } else {
-            return currencies.filter {
+            return AppSettings.allCurrencies.filter {
                 $0.name.lowercased().contains(searchText.lowercased()) ||
                 $0.code.lowercased().contains(searchText.lowercased())
             }
         }
     }
     @State private var showSearch = true
-    @State private var selectedCurrency: Currency?
 
     var body: some View {
         NavigationStack {
             VStack {
                 List {
                     Section {
-                        if selectedCurrency != nil {
-                            CurrencyRow(currencyName: selectedCurrency!.name, currencyCode: selectedCurrency!.code)
+                        if appSettings.selectedCurrency != nil {
+                            CurrencyRow(currencyName: appSettings.selectedCurrency!.name, currencyCode: appSettings.selectedCurrency!.code)
                                 .listRowBackground(appSettings.gradient()) .scrollContentBackground(.hidden)
                         }
                     }
@@ -52,22 +50,7 @@ struct CurrencyList: View {
                     } label: { Image(systemName: "xmark") }
                 }
             }
-        }.onAppear(perform: loadCurrencies)
-    }
-    
-    func loadCurrencies() {
-        guard let url = Bundle.main.url(forResource: "Currency", withExtension: "json"),
-              let data = try? Data(contentsOf: url) else {
-            fatalError("Failed to locate Currencies.json in bundle.")
-        }
-
-        do {
-            let decoder = JSONDecoder()
-            self.currencies = try decoder.decode([Currency].self, from: data)
-        } catch {
-            fatalError("Error decoding currencies: \(error.localizedDescription)")
-        }
-        self.selectedCurrency = currencies.first(where: { $0.code == appSettings.currency })
+        }.onAppear(perform: appSettings.loadCurrencies)
     }
 }
 

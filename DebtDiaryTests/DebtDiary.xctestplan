@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "C90CBC96-2870-4275-B0B0-606A866370BE",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:DebtDiary.xcodeproj",
+      "identifier" : "A143D3D62B5E7492002D8118",
+      "name" : "DebtDiary"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:DebtDiary.xcodeproj",
+        "identifier" : "A143D3E62B5E7496002D8118",
+        "name" : "DebtDiaryTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:DebtDiary.xcodeproj",
+        "identifier" : "A143D3F02B5E7496002D8118",
+        "name" : "DebtDiaryUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

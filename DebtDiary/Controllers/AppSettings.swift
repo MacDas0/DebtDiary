@@ -34,6 +34,11 @@ class AppSettings: ObservableObject {
             )
     }
     // PREFERENCES
+    static let allCurrencies = Bundle.main.decode([Currency].self, from: "Currency.json")
+    @Published var selectedCurrency: Currency?
+    func loadCurrencies()  {
+        selectedCurrency = AppSettings.allCurrencies.first(where: { $0.code == currency })
+    }
     @Published var currency = "USD"
     
     let supportedLanguages = ["Polish", "English"]
