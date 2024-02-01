@@ -22,10 +22,10 @@ struct ContactUsView: View {
         NavigationStack {
             VStack(spacing: 50) {
                 Picker("", selection: $emailType) {
-                    Text("Suggest feature").tag("Suggest feature")
+                    Text("Suggest Feature").tag("Suggest Feature")
                     Text("Report Bug").tag("Report Bug")
                     Text("Other").tag("Other")
-                }.pickerStyle(.segmented)
+                }.pickerStyle(.segmented) .accessibilityIdentifier("Type Picker")
                 VStack(spacing: 15) {
                     TextField("Title", text: $titleText, axis: .vertical).font(.myTitleBIG).accessibilityLabel("Title")
                     TextField("...", text: $bodyText, axis: .vertical).font(.myTitle).accessibilityLabel("Content")

@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "D6B0F6A8-51A5-4E2D-9B9A-C93AF1E86116",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:DebtDiary.xcodeproj",
+        "identifier" : "A143D3F02B5E7496002D8118",
+        "name" : "DebtDiaryUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

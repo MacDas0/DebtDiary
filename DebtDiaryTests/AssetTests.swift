@@ -14,4 +14,8 @@ final class AssetTests: XCTestCase {
     func testCurrencyLoadCorrectly() {
         XCTAssertTrue(AppSettings.allCurrencies.isEmpty == false, "Failed to load currencies from JSON")
     }
+    
+    func testDeviceModelsLoadCorrectly() {
+        XCTAssertTrue(UIDevice.DeviceModel.all.isEmpty == false, "Failed to load device models from JSON")
+    }
 }

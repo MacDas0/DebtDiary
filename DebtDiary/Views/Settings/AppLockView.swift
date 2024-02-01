@@ -28,7 +28,7 @@ struct AppLockView: View {
                             Button {
                                 appSettings.lockState = .editLock
                             } label: {
-                                Text("Change pin code").font(.myMidMedium)
+                                Text("Change PIN code").font(.myMidMedium)
                             }.listRowBackground(appSettings.gradient())
                         }
                     }

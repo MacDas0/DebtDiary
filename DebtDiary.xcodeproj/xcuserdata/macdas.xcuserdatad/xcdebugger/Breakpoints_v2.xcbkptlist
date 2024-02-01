@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1FC3CFA9-06FD-4703-8E93-09B44E59D77F"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FB0F875-B46C-4876-B1EC-DDFDCFBCE8CB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DebtDiary/Extensons/UIDevideModelName.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "decode(_:from:dateDecodingStrategy:keyDecodingStrategy:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8FB0F875-B46C-4876-B1EC-DDFDCFBCE8CB - 47884303b3ae6706"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.NSBundle.decode&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: &#x3c4;_0_0.Type, from: Swift.String, dateDecodingStrategy: Foundation.JSONDecoder.DateDecodingStrategy, keyDecodingStrategy: Foundation.JSONDecoder.KeyDecodingStrategy) -&gt; &#x3c4;_0_0"
+                  moduleName = "DebtDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macdas/Desktop/DebtDiary/DebtDiary/Extensons/UIDevideModelName.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "1996">
+               </Location>
+               <Location
+                  uuid = "8FB0F875-B46C-4876-B1EC-DDFDCFBCE8CB - 47884303b3ae6706"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.NSBundle.decode&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: &#x3c4;_0_0.Type, from: Swift.String, dateDecodingStrategy: Foundation.JSONDecoder.DateDecodingStrategy, keyDecodingStrategy: Foundation.JSONDecoder.KeyDecodingStrategy) -&gt; &#x3c4;_0_0"
+                  moduleName = "DebtDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macdas/Desktop/DebtDiary/DebtDiary/Extensons/UIDevideModelName.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "2088">
+               </Location>
+               <Location
+                  uuid = "8FB0F875-B46C-4876-B1EC-DDFDCFBCE8CB - 47884303b3ae6706"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.NSBundle.decode&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(_: &#x3c4;_0_0.Type, from: Swift.String, dateDecodingStrategy: Foundation.JSONDecoder.DateDecodingStrategy, keyDecodingStrategy: Foundation.JSONDecoder.KeyDecodingStrategy) -&gt; &#x3c4;_0_0"
+                  moduleName = "DebtDiary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macdas/Desktop/DebtDiary/DebtDiary/Extensons/UIDevideModelName.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "2304">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

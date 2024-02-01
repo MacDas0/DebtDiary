@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23C71" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="Cash" representedClassName="Cash" syncable="YES" codeGenerationType="class">
+    <entity name="Cash" representedClassName="Cash" syncable="YES" codeGenerationType="class" coreSpotlightDisplayNameExpression="cashTitle">
         <attribute name="cashAmount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="cashDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="cashLent" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="cashTitle" optional="YES" attributeType="String"/>
+        <attribute name="cashReminderEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="cashReminderTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="cashTitle" optional="YES" attributeType="String" spotlightIndexingEnabled="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="cashPerson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="personCash" inverseEntity="Person"/>
         <relationship name="cashTag" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tag" inverseName="tagCash" inverseEntity="Tag"/>

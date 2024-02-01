@@ -15,13 +15,15 @@
 "Borrow" = "Borrow";
 "LEND" = "LEND";
 "lent" = "lent";
+"Add Reminder" = "Add Reminder";
+"If you wish to set reminders, please enable them in your device's settings." = "If you wish to set reminders, please enable them in your device's settings.";
+"Notifications Disabled" = "Notifications Disabled";
 
 //PIN
 "Tap to Unlock" = "Tap to Unlock";
 "Confirm Pin" = "Confirm Pin";
 "Delete" = "Delete";
 "Create Pin" = "Create Pin";
-//"Enable biometric authentication in Settings to unlock the app" = "Enable biometric authentication in Settings to unlock the app";
 "Enter Pin" = "Enter Pin";
 "0" = "0";
 

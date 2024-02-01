@@ -41,6 +41,15 @@ extension Cash: Comparable {
         set { cashPerson = newValue }
     }
     
+    var reminderTime: Date {
+        get { cashReminderTime ?? .now }
+        set { cashReminderTime = newValue }
+    }
+    
+    var reminderEnabled: Bool {
+        cashReminderEnabled
+    }
+    
     public static func <(lhs: Cash, rhs: Cash) -> Bool {
         let left = lhs.date
         let right = rhs.date
@@ -73,13 +82,15 @@ extension Tag: Comparable {
     }
     
     public static func <(lhs: Tag, rhs: Tag) -> Bool {
-        let left = lhs.name
-        let right = rhs.name
+        let order = ["Food", "Groceries", "Transport", "Entertainment", "Fashion", "Rent", "Subscription", "Medical", "Emergency", "Gift", "Refund", "Other"]
         
-        if left == right {
-            return lhs.ID.uuidString < rhs.ID.uuidString
+        let leftPriority = order.firstIndex(of: lhs.name) ?? order.count
+        let rightPriority = order.firstIndex(of: rhs.name) ?? order.count
+
+        if leftPriority != rightPriority {
+            return leftPriority < rightPriority
         } else {
-            return left < right
+            return lhs.ID.uuidString < rhs.ID.uuidString
         }
     }
 }

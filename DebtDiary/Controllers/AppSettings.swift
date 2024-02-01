@@ -39,7 +39,11 @@ class AppSettings: ObservableObject {
     func loadCurrencies()  {
         selectedCurrency = AppSettings.allCurrencies.first(where: { $0.code == currency })
     }
-    @Published var currency = "USD"
+    @Published var currency = "USD" {
+        didSet {
+            saveCurrencyToUserDefaults()
+        }
+    }
     
     let supportedLanguages = ["Polish", "English"]
     @Published var language = "English"
@@ -115,11 +119,15 @@ class AppSettings: ObservableObject {
         UserDefaults.standard.set(secretPin, forKey: "pin")
     }
     
+    private func saveCurrencyToUserDefaults() {
+        UserDefaults.standard.set(currency, forKey: "currency")
+    }
+    
     private func saveColorToUserDefaults() {
         colorTheme.save(to: UserDefaults.standard, withKey: "color")
     }
     
-    private func loadSettings() {
+    func loadSettings() {
         if let savedLockState = UserDefaults.standard.value(forKey: "lockState") as? String,
            let state = LockState(rawValue: savedLockState) {
             lockState = state
@@ -130,6 +138,7 @@ class AppSettings: ObservableObject {
         }
         
         secretPin = UserDefaults.standard.string(forKey: "pin") ?? ""
+        currency =  UserDefaults.standard.string(forKey: "currency") ?? "USD"
     }
 }
 

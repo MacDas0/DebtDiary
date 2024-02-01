@@ -39,7 +39,7 @@ struct Tab: View {
                             .padding(.top)
                             .foregroundColor(appSettings.colorTheme)
                             .accessibilityLabel("Add")
-                    }.padding(.bottom, 30)
+                    }.padding(.bottom, 30) .sensoryFeedback(.selection, trigger: showAdd)
                 }
                 ToolbarItem(placement: .principal) {
                     VStack {
@@ -59,15 +59,17 @@ struct Tab: View {
                     Button {
                         showSettings.toggle()
                     } label: { Image(systemName: "line.3.horizontal").font(.title3).accessibilityLabel("Settings") }
+                        .sensoryFeedback(.selection, trigger: showSettings)
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         filterPeople.toggle()
-                    } label: { Image(systemName: filterPeople ? "person.2" : "shippingbox").font(.subheadline) .accessibilityLabel(filterPeople ? "Currently filtering by people" : "Currently filtering by category") .accessibilityLabel(filterPeople ? "Click to filter by category" : "Click to filter by people") }
+                    } label: { Image(systemName: filterPeople ? "person.2" : "shippingbox").font(.subheadline) .accessibilityLabel(filterPeople ? "Currently filtering by people" : "Currently filtering by category") .accessibilityHint(filterPeople ? "Click to filter by category" : "Click to filter by people") } .sensoryFeedback(.selection, trigger: filterPeople)
                 }
             }
             .onAppear {
                 dataController.loadTags()
+                dataController.deleteOldTagsIfNotUsed()
             }
             .fullScreenCover(isPresented: $showSettings) {
                 SettingsView()

@@ -136,7 +136,7 @@ struct LockView<Content: View>: View {
                                 pin.append("\(number)")
                             }
                         }, label: {
-                            Text("\(number)").font(.myTitleBIG).frame(maxWidth: .infinity).padding(.vertical, 20) .contentShape(.rect)
+                            Text("\(number)").font(.myTitleBIG).frame(maxWidth: .infinity).padding(.vertical, 20) .contentShape(.rect) .accessibilityIdentifier("00\(number)")
                         }).tint(.white)
                     }
                     

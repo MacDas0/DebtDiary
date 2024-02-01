@@ -47,12 +47,8 @@ struct MainView: View {
                             }
                         }
                     }
-                }.scrollContentBackground(.hidden)
+                }.scrollContentBackground(.hidden) 
             }
-        }.preferredColorScheme(.dark) .tint(.white)
+        }.preferredColorScheme(.dark) .tint(.white) .listRowSpacing(2) .environment(\.defaultMinListRowHeight, 10)
     }
-}
-
-#Preview {
-    MainView(filterPeople: .constant(true), lent: true)
 }

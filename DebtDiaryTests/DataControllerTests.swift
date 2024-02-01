@@ -16,7 +16,6 @@ final class DataControllerTests: BaseTestCase {
         for nr in 0..<count {
             dataController.createCash(amount: 1, person: String(nr), tag: String(nr))
         }
-        dataController.loadTags()
 
         XCTAssertEqual(dataController.count(for: Cash.fetchRequest()), count, "Expected 5 cash")
         XCTAssertEqual(dataController.getTags().count, count, "Expected 5 tags")
@@ -24,10 +23,8 @@ final class DataControllerTests: BaseTestCase {
         XCTAssertEqual(dataController.getAmount(lent: true), count, "Expected amount lent == 5")
         XCTAssertEqual(dataController.getAmount(lent: false), 0, "Expected amount borrowed == 0")
         let tag = dataController.getTags().sorted().first
-        let tagLast = dataController.getTags().sorted().last
         let person = dataController.getPeople().first
         XCTAssertEqual(dataController.getCash(tag: tag!, lent: true).count, 1, "Cash for any tag should equal 1")
         XCTAssertEqual(dataController.getCash(person: person!, lent: true).count, 1, "Cash for any person should equal 1")
-        XCTAssertEqual(dataController.tags.count, count, "There should be 5 tags")
     }
 }

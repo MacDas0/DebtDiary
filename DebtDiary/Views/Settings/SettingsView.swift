@@ -63,7 +63,7 @@ struct SettingsView: View {
                     Button {
                         dismiss()
                     } label: {
-                        Image(systemName: "xmark")
+                        Image(systemName: "xmark").accessibilityIdentifier("Exit")
                     }
                 }
             }
