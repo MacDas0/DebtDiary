@@ -58,14 +58,17 @@ extension DataController {
      
     private func placeReminders(for cash: Cash) async throws {
         let content = UNMutableNotificationContent()
-        content.title = cash.title
+        let title = cash.title.isEmpty ? "" : "- \"\(cash.title)\""
+        content.title = "Reminder \(title)"
         content.sound = .default
-        let subtitle = cash.person.name+" - "+String(cash.amount)+"$"
-        content.subtitle = subtitle
+        let lentOrNot = cash.lent ? "lent" : "borrowed"
+        let toOrFrom = cash.lent ? "to" : "from"
+        let person = cash.person.name.isEmpty ? "??" : cash.person.name
+        let subtitle2 = "You \(lentOrNot) \(cash.amount)$ \(toOrFrom) \(person)"
+        content.subtitle = subtitle2
         
-        let components2 = Calendar.current.dateComponents([.calendar, .hour, .minute], from: cash.reminderTime)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: components2, repeats: false)
-//        let trigger2 = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let components = Calendar.current.dateComponents([.calendar, .hour, .minute], from: cash.reminderTime)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
         
         let id = cash.objectID.uriRepresentation().absoluteString
         let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)

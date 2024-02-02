@@ -175,6 +175,14 @@ struct PersonPickView: View {
                         }
                 }
             }.padding(.horizontal) .padding(.vertical, 5)
+                .onChange(of: personName) {
+                    if personName != thePerson?.name {
+                        thePerson = nil
+                    }
+                    if dataController.getPeople().contains(where: { $0.name == personName }) {
+                        thePerson = dataController.getPeople().first(where: { $0.name == personName })
+                    }
+                }
         }
     }
 }

@@ -18,7 +18,11 @@ struct aListRow: View {
         } label: {
             HStack {
                 Group {
-//                    Image(systemName: "bell")
+                    if cash.reminderEnabled {
+                        if cash.reminderTime > Date.now {
+                            Image(systemName: "bell")
+                        }
+                    }
                     Text(cash.title).font(.myMid)
                     Spacer()
                     Text("\(String(cash.amount))").font(.myMidMedium)

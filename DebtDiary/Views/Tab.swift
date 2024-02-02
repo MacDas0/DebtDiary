@@ -70,6 +70,7 @@ struct Tab: View {
             .onAppear {
                 dataController.loadTags()
                 dataController.deleteOldTagsIfNotUsed()
+                dataController.updateCashReminders()
             }
             .fullScreenCover(isPresented: $showSettings) {
                 SettingsView()

@@ -82,15 +82,24 @@ extension Tag: Comparable {
     }
     
     public static func <(lhs: Tag, rhs: Tag) -> Bool {
-        let order = ["Food", "Groceries", "Transport", "Entertainment", "Fashion", "Rent", "Subscription", "Medical", "Emergency", "Gift", "Refund", "Other"]
+        // Define the order for specific names
+        let order = ["Food", "Groceries", "Transport", "Entertainment", "Emergency", "Other"]
         
+        // Determine the priority based on the order array
         let leftPriority = order.firstIndex(of: lhs.name) ?? order.count
         let rightPriority = order.firstIndex(of: rhs.name) ?? order.count
-
+        
+        // If priorities are different, sort by priority
         if leftPriority != rightPriority {
             return leftPriority < rightPriority
         } else {
-            return lhs.ID.uuidString < rhs.ID.uuidString
+            // If priorities are the same, sort alphabetically by name first
+            if lhs.name != rhs.name {
+                return lhs.name < rhs.name
+            } else {
+                // If names are also the same, then sort by ID
+                return lhs.ID.uuidString < rhs.ID.uuidString
+            }
         }
     }
 }

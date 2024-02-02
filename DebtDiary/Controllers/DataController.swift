@@ -147,6 +147,12 @@ class DataController: ObservableObject {
         return allCash.filter { $0.lent == lent }.map { $0.amount }.reduce(0, +)
     }
     
+    func GetCash() -> [Cash] {
+        let request = Cash.fetchRequest()
+        let allCash = (try? container.viewContext.fetch(request)) ?? []
+        return allCash.sorted()
+    }
+    
     func getPeople() -> [Person] {
         let request = Person.fetchRequest()
         let allPeople = (try? container.viewContext.fetch(request)) ?? []
@@ -326,6 +332,14 @@ class DataController: ObservableObject {
             }
             if tag.name == "---" {
                 delete(tag)
+            }
+        }
+    }
+    
+    func updateCashReminders() {
+        for cash in GetCash() {
+            if cash.reminderTime < Date.now {
+                cash.cashReminderEnabled = false
             }
         }
     }
