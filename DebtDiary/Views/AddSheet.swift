@@ -127,9 +127,24 @@ struct CustomTextField: View {
 //            Image(systemName: image).bold() .frame(width: 30)
             VStack(spacing: 0) {
                 TextField(prompt, text: $text).font(.myTitle).multilineTextAlignment(.center) .padding(5) .frame(maxWidth: .infinity)
+                    .onReceive(text.publisher.collect()) { _ in
+                        self.text = String(self.text.prefix(getStringMaxLength(forPrompt: prompt)))
+                    }
                 Rectangle().fill(appSettings.gradient()).frame(maxWidth: .infinity) .frame(height: 2) .padding(.horizontal)
             }
         }.padding(.bottom, bottomPadding ? 15 : 0)
+    }
+    
+    func getStringMaxLength(forPrompt prompt: String) -> Int {
+        if prompt == "Amount" {
+            return 10
+        } else if prompt == "Person"{
+            return 20
+        } else if prompt == "Title" {
+            return 30
+        } else {
+            return 20
+        }
     }
 }
 

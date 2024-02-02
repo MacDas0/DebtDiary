@@ -10,7 +10,7 @@ import Foundation
 extension Cash: Comparable {
     var amount: Int {
         get { Int(cashAmount) }
-        set { cashAmount = Int16(newValue) }
+        set { cashAmount = Int64(newValue) }
     }
     
     var title: String {
